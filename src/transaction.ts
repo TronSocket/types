@@ -21,7 +21,7 @@ export type InternalTransaction = {
     extra: string
 }
 
-export default interface Transaction {
+export interface Transaction {
     timeStamp: number
     triggerName: string
     transactionId: string
@@ -39,9 +39,9 @@ export default interface Transaction {
     feeLimit: number
     contractCallValue: number
     contractResult: string | null
-    fromAddress: string | null
+    fromAddress: string
     toAddress: string
-    assetName: string
+    assetName: string | null
     assetAmount: number
     latestSolidifiedBlockNumber: number
     internalTransactionList: InternalTransaction[]

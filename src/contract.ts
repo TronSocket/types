@@ -1,6 +1,6 @@
 import { DataMap, RawData, TopicMap } from './parts'
 
-export interface SolidityLog {
+export interface ContractLog {
     timeStamp: number
     triggerName: string
     uniqueId: string
@@ -14,13 +14,13 @@ export interface SolidityLog {
     removed: boolean
     latestSolidifiedBlockNumber: number
     logInfo: unknown
-    rawData: DataMap
+    rawData: RawData
     abi: unknown
     topicList: string[]
     data: string
 }
 
-export interface SolidityEvent {
+export interface ContractEvent {
     timeStamp: number
     triggerName: string
     uniqueId: string
@@ -41,10 +41,4 @@ export interface SolidityEvent {
     eventName: string
     topicMap: TopicMap
     dataMap: DataMap
-}
-
-export interface Solidity {
-    timeStamp: number
-    triggerName: string
-    latestSolidifiedBlockNumber: number
 }

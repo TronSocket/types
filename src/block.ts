@@ -1,4 +1,4 @@
-export default interface Block {
+export interface Block {
     timeStamp: number
     triggerName: string
     blockNumber: number
